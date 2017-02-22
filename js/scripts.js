@@ -9,11 +9,11 @@ var leapYear = function(year) {
 
 // user interface logic
 $(document).ready(function() {
-  $("form#leap-year").submit(function(event) {
+  $("form#leap-year").submit(function() {
     event.preventDefault();
     var year = parseInt($("input#year").val());
     var result = leapYear(year);
-
+    
     $(".year").text(year);
 
     if (!result) {                 // same as writing if (result === false)
